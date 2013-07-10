@@ -1,9 +1,11 @@
-/*  Plugin Name:        A Simple jQuery Slider, jSlider
-    Plugin Version:     1.0.1
-    Plugin URL:         
-    Author:             Bappi D Great
-    Author E-mail:      shimul.ashok@gmail.com
-    Author Web:         http://bappi.d.great.com*/
+/*
+ *  Plugin Name:        A Simple jQuery Slider, jSlider
+ *  Plugin Version:     1.0.1
+ *  Plugin URL:         
+ *  Author:             Bappi D Great
+ *  Author E-mail:      shimul.ashok@gmail.com
+ *  Author Web:         http://bappi.d.great.com
+ */
 
 ;(function($) {
     
@@ -113,4 +115,4 @@
 		});
 	}
 	
-}(jQuery));
+}(jQuery, window, document));
