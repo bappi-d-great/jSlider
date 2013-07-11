@@ -13,6 +13,8 @@ controlPos:     'tr' //tl = top-left, bl, tr, br
 
 Among the above you must provide the images and width of the images as others have some default values. For caption position, you have two options and for Control position you have four options.
 
+Remember, we can't put text/title/url for only one image, we need to put for all. In that case, if we don't need we can use "" or # (in case of url).
+
 You can use this with following code:
 
 $('#one').jSlider({
