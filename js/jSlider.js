@@ -13,12 +13,42 @@
             width:          618,
             startTime:      500,
             intervalTime:   5000,
-            images:         []
+            images:         [],
+            captionPos:     'left', //left or right
+            controlPos:     'tr' //tl = top-left, bl, tr, br
         }
 	
 	$.fn.jSlider = function(options) {
             
                 var config = $.extend({}, defaults, options);
+                
+                switch(config.captionPos)
+                {
+                    case 'right':
+                        config.captionPos = 'jSright'
+                        break;
+                        
+                    default:
+                        config.captionPos = 'jSleft'
+                }
+                
+                switch(config.controlPos)
+                {
+                    case 'tr':
+                        config.controlPos = 'jStr';
+                        break;
+                        
+                    case 'br':
+                        config.controlPos = 'jSbr';
+                        break;
+                    
+                    case 'tl':
+                        config.controlPos = 'jStl';
+                        break;
+                        
+                    default:
+                        config.controlPos = 'jSbl';
+                }
 		
 		var number_of_images = config.images[0].length;
 		var imageIndex = 1;
@@ -29,14 +59,23 @@
                     var i;
                     for(i = 0; i < number_of_images; i++) {
                         $('<li/>', {
-                            html: "<img id='jImg-"+i+"' src='"+config.images[0][i]+"'/><div class='jScaption'><h2>"+config.images[1][i]+"</h2><p>"+config.images[2][i]+"</p></div>"
-                        }).appendTo(galleryList);
+                            html: "<img id='jImg-"+i+"' src='"+config.images[0][i]+"'/><div class='jScaption "+config.captionPos+"'><h2>"+config.images[1][i]+"</h2><p>"+config.images[2][i]+"</p></div>"
+                        })
+                        .attr('data-url', config.images[3][i])
+                        .appendTo(galleryList);
                     }
                     obj
                         .addClass('jSlider')
                         .css({
                             width: config.width
-                        })
+                        });
+                    
+                    $('.jSliderGallery li').on('click', function() {
+                        var url = $(this).data('url');
+                        if(url != '#' && url != '' && url != null)
+                            window.location.href = $(this).data('url');
+                    })
+                    
                 }
 
 		
@@ -74,7 +113,9 @@
 		
 		function bulletPoint(obj)
 		{
-			var list = $('<ul class="jSliderNav" />').appendTo(obj.find('.jSliderWrap'));
+			var list = $('<ul class="jSliderNav" />')
+                                        .addClass(config.controlPos)
+                                        .appendTo(obj.find('.jSliderWrap'));
 			var i;
 			for(i = 1; i <= number_of_images; i++)
 			{

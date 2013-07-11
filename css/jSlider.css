@@ -35,11 +35,18 @@
 .jSlider .jSliderGallery li .jScaption{
 	position: absolute;
 	bottom: 10px;
-	left: 10px;
 	width: 200px;
 	background: #ededed;
 	padding: 10px;
 	cursor: pointer;
+}
+
+.jSlider .jSliderGallery li .jScaption.jSleft{
+    left: 10px;
+}
+
+.jSlider .jSliderGallery li .jScaption.jSright{
+    right: 10px
 }
 
 .jSlider .jSliderNav li{
@@ -49,8 +56,26 @@
 
 .jSlider .jSliderNav{
 	position: absolute;
-	top: 10px;
-	right: 10px;
+}
+
+.jSlider .jSliderNav.jStl{
+    top: 10px;
+    left: 10px
+}
+
+.jSlider .jSliderNav.jSbl{
+    bottom: 10px;
+    left: 10px
+}
+
+.jSlider .jSliderNav.jStr{
+    top: 10px;
+    right: 10px
+}
+
+.jSlider .jSliderNav.jSbl{
+    bottom: 10px;
+    right: 10px
 }
 
 .jSlider .jSliderNav li a{
