@@ -1,0 +1,13 @@
+/*
+ *  Plugin Name:        A Simple jQuery Slider, jSlider
+ *  Plugin Version:     1.0.3
+ *  Plugin URL:         
+ *  Author:             Bappi D Great
+ *  Author E-mail:      shimul.ashok@gmail.com
+ *  Author Web:         http://bappi.d.great.com
+ *
+ *  Free to use and abuse under the MIT license.
+ *  http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+.jSlider *{margin:0;padding:0}.jSlider ul{list-style-type:none}.jSlider{margin:auto;overflow:hidden;position:relative}.jSliderWrap{width:2472px}.jSlider .jSliderGallery li{position:relative;float:left}.jSlider .jSliderGallery li .jScaption{position:absolute;bottom:10px;width:200px;background:#ededed;padding:10px;cursor:pointer}.jSlider .jSliderGallery li .jScaption.jSleft{left:10px}.jSlider .jSliderGallery li .jScaption.jSright{right:10px}.jSlider .jSliderNav li{float:left;margin:0 5px}.jSlider .jSliderNav{position:absolute}.jSlider .jSliderNav.jStl{top:10px;left:10px}.jSlider .jSliderNav.jSbl{bottom:10px;left:10px}.jSlider .jSliderNav.jStr{top:10px;right:10px}.jSlider .jSliderNav.jSbl{bottom:10px;right:10px}.jSlider .jSliderNav li a{text-indent:-9999px;width:10px;height:10px;border:1px solid #fff;background:0;display:block;outline:0}.jSlider .jSliderNav li .jSactive{background:#fff;border:1px solid #000}

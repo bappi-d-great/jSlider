@@ -1,0 +1,41 @@
+This is a very simple jQuery slideshow plugin.
+
+How to use:
+
+You have some configuration options.
+
+width:          618, //same as image width
+startTime:      500,
+intervalTime:   5000,
+images:         [],
+captionPos:     'left', //left or right
+controlPos:     'tr' //tl = top-left, bl, tr, br
+
+Among the above you must provide the images and width of the images as others have some default values. For caption position, you have two options and for Control position you have four options.
+
+You can use this with following code:
+
+$('#one').jSlider({
+    startTime:      1000,
+    intervalTime:   3000,
+    images :        [
+                        ['images/nemo.jpg', 'images/toystory.jpg', 'images/up.jpg', 'images/walle.jpg'],
+                        ['Finding Nemo', 'The toy story', '', 'Walle Hist'],
+                        ['', 'Lorem ipsum dolor sit amet sis abenhu', 'Lorem ipsum dolor sit amet sis abenhu', 'Lorem ipsum dolor sit amet sis abenhu'],
+                        ['http://google.com', '#', 'http://bing.com', 'http://ask.com']
+                    ],
+    captionPos:     'right'
+});
+
+
+
+
+Developer Info:
+
+Ashok Kumar Nath (Bappi D Great)
+shimul.ashok@gmail.com
+http://bappi-d-great.com
++8801713083383
+
+
+Free to use and abuse under the MIT license. http://www.opensource.org/licenses/mit-license.php
