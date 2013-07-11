@@ -10,7 +10,7 @@
 ;(function($) {
     
         var defaults = {
-            width:          618,
+            width:          618, //same as image width
             startTime:      500,
             intervalTime:   5000,
             images:         [],
